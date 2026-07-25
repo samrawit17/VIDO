@@ -1,11 +1,11 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useEffect, useMemo, useRef, useState } from "react";
 import logoImg from "@/assets/VIDO-logo.png";
+import afroDigitalLogo from "@/assets/afro digital logo.png";
 import heroImg from "@/assets/hero-community.jpg";
 import studentsImg from "@/assets/impact-students.jpg";
 import programsImg from "@/assets/tile-programs.jpg";
 import careersImg from "@/assets/tile-careers.jpg";
-import agImg from "@/assets/impact-agriculture.jpg";
 import eduImg from "@/assets/impact-education.jpg";
 import healthImg from "@/assets/impact-health.jpg";
 import yifruImg from "@/assets/Board&Chief-Executive-profile/Professor Yifru Berhan Mitke.jpg";
@@ -18,7 +18,7 @@ import hakimImg from "@/assets/Board&Chief-Executive-profile/Hakim Abebech Shife
 import abasImg from "@/assets/Board&Chief-Executive-profile/Dr. Abas Hassen Yesuf.jpg";
 import merawiImg from "@/assets/Board&Chief-Executive-profile/Dr Merawi Goshu.jpg";
 import {
-  Search, Globe, Menu, Play, ChevronRight, ChevronLeft, Calendar, MapPin,
+  Search, Globe, Menu, Play, ChevronRight, ChevronLeft, MapPin,
   Facebook, Twitter, Instagram, Youtube, Linkedin, ArrowRight, Phone, Mail,
   Heart, X, Droplets, HeartPulse, BookOpen, Sprout, Users, Shield, Building2,
 } from "lucide-react";
@@ -88,20 +88,6 @@ const tiles = [
   { title: "Diaspora", subtitle: "Co-invest with us", img: careersImg, href: "/diaspora" },
 ];
 
-const events = [
-  { date: "JUL 22", loc: "Addis Ababa", title: "VIDO Governance & Transparency Forum", tag: "Governance" },
-  { date: "AUG 10", loc: "Oromia Region", title: "WASH Deployment — Community Cohort 3", tag: "WASH" },
-  { date: "AUG 28", loc: "Afar Region", title: "Pastoralist Primary Healthcare Field Mission", tag: "Health" },
-  { date: "SEP 15", loc: "Global / Online", title: "Diaspora Technical Intake Webinar", tag: "Diaspora" },
-];
-
-const news = [
-  { title: "VIDO expands WASH programs across four regions of Ethiopia", excerpt: "Clean-water access reaches new pastoralist woredas under the integrated development model." },
-  { title: "Board publishes FY2026 governance and accountability report", excerpt: "Reviewed disbursements confirm compliance with Proclamation 1113/2019 and MEAL frameworks." },
-  { title: "Indigenous seed bank launched in partnership with Deshet Centre", excerpt: "600+ native medicinal-plant species preserved — bridging traditional wisdom and modern science." },
-  { title: "Diaspora Engagement Window opens: technical skill-transfer pipeline live", excerpt: "Professionals abroad can now co-design programs and invest technical time from anywhere." },
-];
-
 const socialTiles = [
   { title: "Integrated Development", body: "Water, health, education, livelihoods, human rights.", tone: "primary" },
   { title: "One Problem, One Project, One Solution", body: "Our engagement approach.", tone: "gold" },
@@ -163,11 +149,11 @@ function Index() {
       <div className="bg-primary text-primary-foreground text-xs">
         <div className="container-editorial flex items-center justify-between py-2">
           <div className="flex items-center gap-4 opacity-90">
-            <a href="#governance" className="hover:opacity-100">Policy & Governance</a>
+            <Link to="/governance" className="hover:opacity-100">Policy & Governance</Link>
             <span className="opacity-40">|</span>
             <a href="#docs" className="hover:opacity-100">Quick Links</a>
             <span className="opacity-40">|</span>
-            <a href="#contact" className="hover:opacity-100">Contact</a>
+            <Link to="/contact" className="hover:opacity-100">Contact</Link>
           </div>
           <div className="flex items-center gap-4">
             <Search className="w-3.5 h-3.5" />
@@ -187,13 +173,13 @@ function Index() {
             </div>
           </a>
           <nav className="hidden lg:flex items-center gap-7 text-sm">
-            <a href="#about" className="hover:text-gold">About Us</a>
+            <Link to="/about" className="hover:text-gold">About Us</Link>
             <Link to="/programs" className="hover:text-gold">Thematic Focus</Link>
-            <a href="#governance" className="hover:text-gold">Governance</a>
-            <a href="#board" className="hover:text-gold">Board</a>
-            <a href="#news" className="hover:text-gold">News & Events</a>
-            <a href="#diaspora" className="hover:text-gold">Diaspora</a>
-            <a href="#contact" className="hover:text-gold">Contact</a>
+            <Link to="/governance" className="hover:text-gold">Governance</Link>
+            <Link to="/board" className="hover:text-gold">Board</Link>
+            <Link to="/news" className="hover:text-gold">News & Events</Link>
+            <Link to="/diaspora" className="hover:text-gold">Diaspora</Link>
+            <Link to="/contact" className="hover:text-gold">Contact</Link>
           </nav>
           <div className="flex items-center gap-3">
             <a href="#donate" className="hidden md:inline-flex items-center gap-2 bg-gold text-gold-foreground px-4 py-2 rounded-sm text-sm font-semibold hover:brightness-110 transition">
@@ -460,27 +446,10 @@ function Index() {
       {/* UPCOMING EVENTS */}
       <section className="py-20 bg-muted">
         <div className="container-editorial">
-          <div className="flex items-end justify-between mb-8 flex-wrap gap-4">
+          <div className="text-center max-w-xl mx-auto">
             <h2 className="font-display text-3xl text-primary">Upcoming Events</h2>
-            <a href="#" className="text-sm text-primary font-semibold hover:underline">View all events →</a>
-          </div>
-          <div className="grid md:grid-cols-2 gap-4">
-            {events.map((e) => (
-              <div key={e.title} className="border border-border bg-background p-5 flex gap-5 hover:border-primary transition group">
-                <div className="w-16 h-16 bg-primary text-primary-foreground flex flex-col items-center justify-center shrink-0 rounded-sm">
-                  <span className="font-display text-lg leading-none">{e.date.split(" ")[1]}</span>
-                  <span className="text-[10px] uppercase tracking-widest opacity-80 mt-1">{e.date.split(" ")[0]}</span>
-                </div>
-                <div className="flex-1">
-                  <div className="text-[10px] uppercase tracking-widest text-gold font-semibold">{e.tag}</div>
-                  <div className="font-display text-lg text-primary group-hover:underline mt-1">{e.title}</div>
-                  <div className="flex items-center gap-4 mt-2 text-xs text-muted-foreground">
-                    <span className="flex items-center gap-1"><Calendar className="w-3 h-3" /> {e.date}</span>
-                    <span className="flex items-center gap-1"><MapPin className="w-3 h-3" /> {e.loc}</span>
-                  </div>
-                </div>
-              </div>
-            ))}
+            <div className="w-16 h-[3px] bg-gold mx-auto my-5" />
+            <p className="text-muted-foreground text-lg font-display italic">Coming soon — stay tuned!</p>
           </div>
         </div>
       </section>
@@ -488,26 +457,10 @@ function Index() {
       {/* NEWS */}
       <section id="news" className="py-20">
         <div className="container-editorial">
-          <div className="flex items-end justify-between mb-8 flex-wrap gap-4">
-            <div>
-              <h2 className="font-display text-3xl text-primary">News</h2>
-              <p className="text-sm text-muted-foreground mt-1">Latest from Vital Vision Integrated Development</p>
-            </div>
-            <a href="#" className="text-sm text-primary font-semibold hover:underline">More News →</a>
-          </div>
-          <div className="grid md:grid-cols-4 gap-5">
-            {news.map((n, i) => (
-              <article key={i} className="bg-background border border-border overflow-hidden group hover:shadow-[var(--shadow-soft)] transition">
-                <div className="h-40 overflow-hidden">
-                  <img src={[agImg, eduImg, healthImg, programsImg][i]} alt="" className="w-full h-full object-cover group-hover:scale-105 transition duration-500" width={600} height={400} loading="lazy" />
-                </div>
-                <div className="p-5">
-                  <h3 className="font-display text-primary text-base leading-snug group-hover:underline">{n.title}</h3>
-                  <p className="text-xs text-muted-foreground mt-2 line-clamp-3">{n.excerpt}</p>
-                  <button className="mt-4 text-xs font-semibold text-primary hover:text-secondary uppercase tracking-widest">Read More →</button>
-                </div>
-              </article>
-            ))}
+          <div className="text-center max-w-xl mx-auto">
+            <h2 className="font-display text-3xl text-primary">News</h2>
+            <div className="w-16 h-[3px] bg-gold mx-auto my-5" />
+            <p className="text-muted-foreground text-lg font-display italic">Coming soon — we'll share updates here!</p>
           </div>
         </div>
       </section>
@@ -651,7 +604,7 @@ function Index() {
           <div className="container-editorial py-4 flex items-center justify-center gap-2 text-[11px] opacity-60">
             <span>powered by</span>
             <a href="https://afrodigital.dev/" target="_blank" rel="noopener noreferrer" className="hover:opacity-100 opacity-90">
-              <img src="https://afrodigital.dev/assets/logo-DlzEpGU4.png" alt="Afro Digital" className="h-4 w-auto" />
+              <img src={afroDigitalLogo} alt="Afro Digital" className="h-4 w-auto" />
             </a>
           </div>
         </div>
