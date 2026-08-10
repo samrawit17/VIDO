@@ -4,7 +4,7 @@ import heroImg from "@/assets/hero-community.jpg";
 import logoImg from "@/assets/VIDO-logo.png";
 import yifruImg from "@/assets/Board&Chief-Executive-profile/Professor Yifru Berhan Mitke.jpg";
 import abatiyeImg from "@/assets/Board&Chief-Executive-profile/Mr. Abatiye Hailemariyam.jpeg";
-import tadesseImg from "@/assets/Board&Chief-Executive-profile/Mr. Tadesse Atlabachew Abegaz.jpg";
+import tadesseImg from "@/assets/Board&Chief-Executive-profile/Mr. Tadesse Atlabachew Abegaz.jpeg";
 import danielImg from "@/assets/Board&Chief-Executive-profile/Dr. Daniel Hailemichael Burssa.jpg";
 import zelalemImg from "@/assets/Board&Chief-Executive-profile/Dr. Zelalem Mulatu Demme.jpg";
 import yohannesImg from "@/assets/Board&Chief-Executive-profile/Mr. Yohannes Mitiku Diro.jpg";
