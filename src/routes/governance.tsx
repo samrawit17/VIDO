@@ -5,6 +5,7 @@ import betreImg from "@/assets/Directorates/BetreMariyamYosef.JPG";
 import tadesseBelayImg from "@/assets/Directorates/Tadesse Belay.jpeg";
 import selamAyenewImg from "@/assets/Directorates/Selam Ayenew.jpg";
 import amareMekonenImg from "@/assets/Directorates/Amare Mekonen.jpeg";
+import tegegneAkliluImg from "@/assets/Directorates/Tegegne Aklilu.jpeg";
 
 export const Route = createFileRoute("/governance")({
   component: Governance,
@@ -66,7 +67,7 @@ const departments = [
     name: "Monitoring & Evaluation Directorate",
     director: "Tegegne Akililu",
     role: "Director",
-    photo: "",
+    photo: tegegneAkliluImg,
     focus: [
       "Performance tracking",
       "Data collection & analysis",
