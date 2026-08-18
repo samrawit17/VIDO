@@ -19,11 +19,66 @@ const boardMembers = [
 ];
 
 const departments = [
-  { name: "Health & Education", desc: "Primary healthcare, HIV/AIDS, maternal & child nutrition, WASH in schools, ECD, alternative education pathways." },
-  { name: "Environment & Agriculture", desc: "Climate-resilient agriculture, indigenous seed banks, conservation farming, watershed restoration, renewable energy." },
-  { name: "Peace, Youth & Digital", desc: "Community peace councils, youth entrepreneurship, digital literacy, women's leadership, human rights awareness." },
-  { name: "Finance, HR & Administration", desc: "Financial management, payroll, procurement, human resources, asset management, compliance reporting." },
-  { name: "Partnership, Resource Mobilization & M&E", desc: "Donor engagement, grant writing, diaspora window, MEAL framework, quarterly reporting, impact evaluation." },
+  {
+    name: "Health & Education Directorate",
+    director: "Abatiye Hailemariyam",
+    role: "Director",
+    focus: [
+      "Strengthening health systems",
+      "Expanding access to quality education",
+      "Building institutional capacity",
+    ],
+  },
+  {
+    name: "Environment & Agriculture Directorate",
+    director: "Amare Mekonen",
+    role: "Director",
+    focus: ["Promoting sustainable agriculture", "Environmental protection", "Climate resilience"],
+  },
+  {
+    name: "Peace, Youth & Digital Directorate",
+    director: "Tadesse Belay",
+    role: "Director",
+    focus: ["Empowering youth", "Advancing peacebuilding initiatives", "Enhancing digital literacy and innovation"],
+  },
+  {
+    name: "Finance & HR Administration Directorate",
+    director: "Selam Ayenew",
+    role: "Director",
+    focus: ["Managing financial transparency", "Strengthening HR systems", "Organizational administration"],
+  },
+  {
+    name: "Partnership & Resource Mobilization Directorate",
+    director: "Dr Aweke Moges",
+    role: "Director",
+    focus: ["Building partnerships", "Mobilizing resources", "Ensuring accountability through monitoring & evaluation"],
+  },
+  {
+    name: "Monitoring & Evaluation Directorate",
+    director: "Tegegne Akililu",
+    role: "Director",
+    focus: [
+      "Performance tracking",
+      "Data collection & analysis",
+      "Accountability & transparency",
+      "Impact assessment",
+      "Learning & adaptation",
+      "Reporting",
+    ],
+  },
+  {
+    name: "Information Technology Directorate",
+    director: "BetreMariyam Yosef",
+    role: "IT Advisor",
+    focus: [
+      "Digital transformation & innovation",
+      "ICT infrastructure development",
+      "Cybersecurity & data protection",
+      "Systems integration & automation",
+      "Capacity building & digital literacy",
+      "Data management & analytics",
+    ],
+  },
 ];
 
 const principles = [
@@ -165,18 +220,25 @@ function Governance() {
         <div className="container-editorial">
           <div className="text-center max-w-2xl mx-auto mb-14">
             <div className="text-[11px] uppercase tracking-[0.3em] text-gold mb-3">Operational Structure</div>
-            <h2 className="font-display text-3xl md:text-4xl text-primary leading-tight">Departments</h2>
+            <h2 className="font-display text-3xl md:text-4xl text-primary leading-tight">Directorates</h2>
             <div className="w-16 h-[3px] bg-gold mx-auto my-5" />
-            <p className="text-muted-foreground text-sm">Programs and operations are delivered through five specialized departments, each led by a department head reporting to the Executive Director.</p>
+            <p className="text-muted-foreground text-sm">Programs and operations are delivered through seven specialized directorates, each led by a director or advisor reporting to the Executive Director.</p>
           </div>
-          <div className="grid md:grid-cols-5 gap-4">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
             {departments.map((d) => (
-              <div key={d.name} className="border border-border bg-background p-5 hover:border-gold transition flex flex-col">
+              <div key={d.name} className="border border-border bg-background p-6 hover:border-gold transition flex flex-col">
                 <div className="w-10 h-10 bg-primary/10 text-primary flex items-center justify-center rounded-sm mb-3 shrink-0">
                   <FileText className="w-5 h-5" />
                 </div>
                 <div className="font-display text-base text-primary leading-tight">{d.name}</div>
-                <p className="text-xs text-muted-foreground mt-2 leading-relaxed">{d.desc}</p>
+                <div className="text-[10px] uppercase tracking-widest text-gold font-semibold mt-1">{d.role} · {d.director}</div>
+                <ul className="mt-3 space-y-1.5">
+                  {d.focus.map((f) => (
+                    <li key={f} className="text-xs text-muted-foreground leading-relaxed flex items-start gap-2">
+                      <Check className="w-3.5 h-3.5 text-gold mt-0.5 shrink-0" /> {f}
+                    </li>
+                  ))}
+                </ul>
               </div>
             ))}
           </div>
@@ -246,7 +308,7 @@ function Governance() {
                     </div>
                   </div>
                   <div className="mt-6 text-xs opacity-70 border-t border-white/10 pt-4">
-                    Certificate of Registration No. {new Date().getFullYear() >= 2026 ? "4804" : "4804"} · Issued by FDRE ACSO
+                    Certificate of Registration No. 8042 · Issued by FDRE ACSO
                   </div>
                 </div>
               </div>

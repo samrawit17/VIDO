@@ -409,10 +409,10 @@ function Index() {
               </div>
             ))}
           </div>
-          <div className="mt-8 grid md:grid-cols-5 gap-3 text-sm">
-            {["Health & Education", "Environment & Agriculture", "Peace, Youth & Digital", "Finance, HR Administration", "Partnership, Resource Mobilization & M&E"].map((d) => (
+          <div className="mt-8 grid md:grid-cols-2 lg:grid-cols-4 gap-3 text-sm">
+            {["Health & Education", "Environment & Agriculture", "Peace, Youth & Digital", "Finance & HR Administration", "Partnership & Resource Mobilization", "Monitoring & Evaluation", "Information Technology"].map((d) => (
               <div key={d} className="bg-background border border-border p-4">
-                <div className="text-[10px] uppercase tracking-widest text-gold">Department</div>
+                <div className="text-[10px] uppercase tracking-widest text-gold">Directorate</div>
                 <div className="font-display text-primary mt-1 leading-tight">{d}</div>
               </div>
             ))}
