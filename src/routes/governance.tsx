@@ -4,6 +4,7 @@ import logoImg from "@/assets/VIDO-logo.png";
 import betreImg from "@/assets/Directorates/BetreMariyamYosef.JPG";
 import tadesseBelayImg from "@/assets/Directorates/Tadesse Belay.jpeg";
 import selamAyenewImg from "@/assets/Directorates/Selam Ayenew.jpg";
+import amareMekonenImg from "@/assets/Directorates/Amare Mekonen.jpeg";
 
 export const Route = createFileRoute("/governance")({
   component: Governance,
@@ -37,7 +38,7 @@ const departments = [
     name: "Environment & Agriculture Directorate",
     director: "Amare Mekonen",
     role: "Director",
-    photo: "",
+    photo: amareMekonenImg,
     focus: ["Promoting sustainable agriculture", "Environmental protection", "Climate resilience"],
   },
   {
