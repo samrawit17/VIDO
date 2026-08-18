@@ -3,7 +3,7 @@ import { Building2, Shield, Check, ArrowRight, Heart, MapPin, Users, Scale, Phon
 import logoImg from "@/assets/VIDO-logo.png";
 import betreImg from "@/assets/Directorates/BetreMariyamYosef.JPG";
 import tadesseBelayImg from "@/assets/Directorates/Tadesse Belay.jpeg";
-import selamAyenewImg from "@/assets/Directorates/Selam Ayenew.jpg";
+import selamAyenewImg from "@/assets/Directorates/Selamawit Ayenew.jpg";
 import amareMekonenImg from "@/assets/Directorates/Amare Mekonen.jpeg";
 import tegegneAkliluImg from "@/assets/Directorates/Tegegne Aklilu.jpeg";
 
@@ -51,7 +51,7 @@ const departments = [
   },
   {
     name: "Finance & HR Administration Directorate",
-    director: "Selam Ayenew",
+    director: "Selamawit Ayenew",
     role: "Director",
     photo: selamAyenewImg,
     focus: ["Managing financial transparency", "Strengthening HR systems", "Organizational administration"],
