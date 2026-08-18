@@ -262,7 +262,7 @@ function Programs() {
           <p className="text-sm text-muted-foreground leading-relaxed">
             Whether you are a government agency, an INGO, a diaspora professional or a donor —
             VIDO's integrated model is designed for partnership. Every program is board-reviewed,
-            MEAL-monitored and delivered under Proclamation No. 1113/2019.
+            MEAL-monitored and delivered under Proclamation No. 1113/2019 with Registration No. 8042.
           </p>
           <div className="mt-8 flex flex-wrap justify-center gap-3">
             <Link to="/" className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-6 py-3 rounded-sm text-sm font-semibold hover:bg-secondary transition">
@@ -286,7 +286,7 @@ function Programs() {
                 <div className="text-[10px] uppercase tracking-widest opacity-70">Vital Vision Integrated Development</div>
               </div>
             </div>
-            <p className="text-xs opacity-80 mt-4 leading-relaxed">Vital Vision Integrated Development Organization — an indigenous, non-governmental, non-profit and non-religious organization legally re-registered by FDRE ACSO under Proclamation No. 1113/2019.</p>
+            <p className="text-xs opacity-80 mt-4 leading-relaxed">Vital Vision Integrated Development Organization — an indigenous, non-governmental, non-profit and non-religious organization legally re-registered by FDRE ACSO under Proclamation No. 1113/2019 with Registration No. 8042.</p>
           </div>
           <div>
             <div className="text-[11px] uppercase tracking-widest text-gold mb-3">Explore</div>

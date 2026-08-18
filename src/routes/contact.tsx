@@ -214,7 +214,7 @@ function Contact() {
             <div className="flex items-center gap-3">
               <img src={logoImg} alt="VIDO" className="h-10 w-auto" />
             </div>
-            <p className="text-xs opacity-80 mt-4 leading-relaxed">Vital Vision Integrated Development Organization — an indigenous, non-governmental, non-profit and non-religious organization legally re-registered by FDRE ACSO under Proclamation No. 1113/2019.</p>
+            <p className="text-xs opacity-80 mt-4 leading-relaxed">Vital Vision Integrated Development Organization — an indigenous, non-governmental, non-profit and non-religious organization legally re-registered by FDRE ACSO under Proclamation No. 1113/2019 with Registration No. 8042.</p>
           </div>
           <div>
             <div className="text-[11px] uppercase tracking-widest text-gold mb-3">Explore</div>

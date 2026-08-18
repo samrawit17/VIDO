@@ -61,7 +61,7 @@ const audienceTabs = {
   },
   Partner: {
     heading: "Aligning Institutions For Impact",
-    body: "We co-design programs with government, multilateral and INGO partners under Proclamation No. 1113/2019. Every intervention is board-reviewed and delivered through the One Problem – One Project – One Solution engagement approach.",
+    body: "We co-design programs with government, multilateral and INGO partners under Proclamation No. 1113/2019 with Registration No. 8042. Every intervention is board-reviewed and delivered through the One Problem – One Project – One Solution engagement approach.",
     bullets: ["Board-reviewed governance", "MEAL-driven reporting", "Multisectoral program design", "Local capacity building", "MoU-ready frameworks", "Accountability & transparency"],
     cta: "Become a Partner",
   },
@@ -198,7 +198,7 @@ function Index() {
           <div className="absolute inset-0 flex items-center">
             <div className="container-editorial">
               <div className="max-w-2xl text-primary-foreground">
-                <div className="inline-block text-[11px] uppercase tracking-[0.3em] bg-gold text-gold-foreground px-3 py-1 mb-6">Indigenous NGO · Ethiopia · Proclamation 1113/2019</div>
+                <div className="inline-block text-[11px] uppercase tracking-[0.3em] bg-gold text-gold-foreground px-3 py-1 mb-6">Indigenous NGO · Ethiopia · Proclamation 1113/2019 · Reg. No. 8042</div>
                 <h1 className="font-display text-4xl md:text-6xl leading-[1.05] text-balance">
                   A resilient, empowered community — <span className="italic text-gold">every right, realized</span>.
                 </h1>
@@ -561,7 +561,7 @@ function Index() {
                 <div className="text-[10px] uppercase tracking-widest opacity-70">Vital Vision Integrated Development</div>
               </div>
             </div>
-            <p className="text-xs opacity-80 mt-4 leading-relaxed">Vital Vision Integrated Development Organization — an indigenous, non-governmental, non-profit and non-religious organization legally re-registered by FDRE ACSO under Proclamation No. 1113/2019.</p>
+            <p className="text-xs opacity-80 mt-4 leading-relaxed">Vital Vision Integrated Development Organization — an indigenous, non-governmental, non-profit and non-religious organization legally re-registered by FDRE ACSO under Proclamation No. 1113/2019 with Registration No. 8042.</p>
           </div>
           <div>
             <div className="text-[11px] uppercase tracking-widest text-gold mb-3">Explore</div>

@@ -12,7 +12,7 @@ export const Route = createFileRoute("/about")({
 });
 
 const timeline = [
-  { year: "2019", event: "VIDO re-registered under FDRE ACSO Proclamation No. 1113/2019, formalizing its legal status as an indigenous non-governmental organization." },
+  { year: "2019", event: "VIDO re-registered under FDRE ACSO Proclamation No. 1113/2019 with Registration No. 8042, formalizing its legal status as an indigenous non-governmental organization." },
   { year: "2020", event: "Expanded WASH and primary healthcare operations across Oromia and SNNP regions, reaching 5,000+ households with clean water access." },
   { year: "2021", event: "Launched integrated education and livelihoods programs; established elder-led peace councils in conflict-prone woredas." },
   { year: "2022", event: "Opened diaspora engagement window; deployed MEAL framework across all thematic axes with board-reviewed quarterly reporting." },
@@ -114,7 +114,7 @@ function About() {
                   About <span className="italic text-gold">VIDO</span>
                 </h1>
                 <p className="mt-4 text-sm md:text-base opacity-90 max-w-xl">
-                  Vital Vision Integrated Development Organization is an indigenous, non-governmental, non-profit and non-religious organization legally registered under the FDRE ACSO Proclamation No. 1113/2019. We work across nine regions of Ethiopia to build resilient, self-reliant communities through integrated, community-owned development programs.
+                  Vital Vision Integrated Development Organization is an indigenous, non-governmental, non-profit and non-religious organization legally registered under the FDRE ACSO Proclamation No. 1113/2019 with Registration No. 8042. We work across nine regions of Ethiopia to build resilient, self-reliant communities through integrated, community-owned development programs.
                 </p>
               </div>
             </div>
@@ -154,7 +154,7 @@ function About() {
               <h2 className="font-display text-3xl md:text-4xl text-primary leading-tight text-balance">A journey rooted in community, guided by <span className="italic text-gold">purpose</span>.</h2>
               <div className="w-24 h-[3px] bg-gold my-5" />
               <p className="text-muted-foreground text-sm leading-relaxed">
-                VIDO was founded by a group of like-minded Ethiopian professionals who recognized that sustainable development must be indigenous — designed by the community, for the community, and sustained by the community. Re-registered under Proclamation 1113/2019, VIDO has grown from a small initiative into a multi-regional organization operating across thematic axes that address the root causes of poverty and vulnerability.
+                VIDO was founded by a group of like-minded Ethiopian professionals who recognized that sustainable development must be indigenous — designed by the community, for the community, and sustained by the community. Re-registered under Proclamation 1113/2019 with Registration No. 8042, VIDO has grown from a small initiative into a multi-regional organization operating across thematic axes that address the root causes of poverty and vulnerability.
               </p>
               <p className="text-muted-foreground text-sm leading-relaxed mt-4">
                 Our journey has been marked by deep engagement with local elders, women's groups, youth and government partners. Every milestone — from the first borehole in Oromia to the diaspora engagement window — reflects our commitment to listening first, acting second and transferring ownership always.
@@ -334,7 +334,7 @@ function About() {
                 <div className="text-[10px] uppercase tracking-widest opacity-70">Vital Vision Integrated Development</div>
               </div>
             </div>
-            <p className="text-xs opacity-80 mt-4 leading-relaxed">Vital Vision Integrated Development Organization — an indigenous, non-governmental, non-profit and non-religious organization legally re-registered by FDRE ACSO under Proclamation No. 1113/2019.</p>
+            <p className="text-xs opacity-80 mt-4 leading-relaxed">Vital Vision Integrated Development Organization — an indigenous, non-governmental, non-profit and non-religious organization legally re-registered by FDRE ACSO under Proclamation No. 1113/2019 with Registration No. 8042.</p>
           </div>
           <div>
             <div className="text-[11px] uppercase tracking-widest text-gold mb-3">Explore</div>

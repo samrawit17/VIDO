@@ -164,7 +164,7 @@ function Governance() {
           </h1>
           <div className="w-16 h-[3px] bg-gold mx-auto my-5" />
           <p className="text-sm md:text-base opacity-90 max-w-2xl mx-auto leading-relaxed">
-            VIDO is legally registered under the FDRE ACSO Proclamation No. 1113/2019. Our governance framework ensures transparency, accountability and community ownership at every level — from the General Assembly to the field office.
+            VIDO is legally registered under the FDRE ACSO Proclamation No. 1113/2019 with Registration No. 8042. Our governance framework ensures transparency, accountability and community ownership at every level — from the General Assembly to the field office.
           </p>
         </div>
       </section>
@@ -332,9 +332,9 @@ function Governance() {
               <div className="flex items-start gap-4">
                 <Scale className="w-8 h-8 text-gold shrink-0 mt-1" />
                 <div>
-                  <div className="font-display text-2xl mb-2">Registered under Proclamation No. 1113/2019</div>
+                  <div className="font-display text-2xl mb-2">Registered under Proclamation No. 1113/2019 with Registration No. 8042</div>
                   <p className="opacity-85 text-sm leading-relaxed">
-                    VIDO is fully registered with the Federal Democratic Republic of Ethiopia's Authority for Civil Society Organizations (ACSO) under Proclamation No. 1113/2019. This legal framework governs all aspects of our operations — from financial reporting and board composition to program implementation and partnership agreements.
+                    VIDO is fully registered with the Federal Democratic Republic of Ethiopia's Authority for Civil Society Organizations (ACSO) under Proclamation No. 1113/2019 with Registration No. 8042. This legal framework governs all aspects of our operations — from financial reporting and board composition to program implementation and partnership agreements.
                   </p>
                   <div className="mt-6 space-y-3">
                     <div className="flex items-start gap-3">
@@ -394,7 +394,7 @@ function Governance() {
             <div className="flex items-center gap-3">
               <img src={logoImg} alt="VIDO" className="h-10 w-auto" />
             </div>
-            <p className="text-xs opacity-80 mt-4 leading-relaxed">Vital Vision Integrated Development Organization — an indigenous, non-governmental, non-profit and non-religious organization legally re-registered by FDRE ACSO under Proclamation No. 1113/2019.</p>
+            <p className="text-xs opacity-80 mt-4 leading-relaxed">Vital Vision Integrated Development Organization — an indigenous, non-governmental, non-profit and non-religious organization legally re-registered by FDRE ACSO under Proclamation No. 1113/2019 with Registration No. 8042.</p>
           </div>
           <div>
             <div className="text-[11px] uppercase tracking-widest text-gold mb-3">Explore</div>
