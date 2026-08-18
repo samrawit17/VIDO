@@ -1,11 +1,12 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Building2, Shield, Check, ArrowRight, Heart, MapPin, Users, Scale, Phone, Mail, Linkedin } from "lucide-react";
 import logoImg from "@/assets/VIDO-logo.png";
-import betreImg from "@/assets/Directorates/BetreMariyamYosef.JPG";
+import betreImg from "@/assets/Directorates/BetrePic.jpeg";
 import tadesseBelayImg from "@/assets/Directorates/Tadesse Belay.jpeg";
 import selamAyenewImg from "@/assets/Directorates/Selamawit Ayenew.jpg";
 import amareMekonenImg from "@/assets/Directorates/Amare Mekonen.jpeg";
 import tegegneAkliluImg from "@/assets/Directorates/Tegegne Aklilu.jpeg";
+import samueleImg from "@/assets/Directorates/DrSamuele Mengistu Urge.jpeg";
 
 export const Route = createFileRoute("/governance")({
   component: Governance,
@@ -26,9 +27,9 @@ const boardMembers = [
 const departments = [
   {
     name: "Health & Education Directorate",
-    director: "Abatiye Hailemariyam",
+    director: "Dr. Samuele Mengistu Urge",
     role: "Director",
-    photo: "",
+    photo: samueleImg,
     focus: [
       "Strengthening health systems",
       "Expanding access to quality education",
