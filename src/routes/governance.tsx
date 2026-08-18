@@ -1,6 +1,9 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { Building2, Shield, Check, ArrowRight, Heart, MapPin, Users, Scale, FileText, Phone, Mail } from "lucide-react";
+import { Building2, Shield, Check, ArrowRight, Heart, MapPin, Users, Scale, Phone, Mail, Linkedin } from "lucide-react";
 import logoImg from "@/assets/VIDO-logo.png";
+import betreImg from "@/assets/Directorates/BetreMariyamYosef.JPG";
+import tadesseBelayImg from "@/assets/Directorates/Tadesse Belay.jpeg";
+import selamAyenewImg from "@/assets/Directorates/Selam Ayenew.jpg";
 
 export const Route = createFileRoute("/governance")({
   component: Governance,
@@ -23,6 +26,7 @@ const departments = [
     name: "Health & Education Directorate",
     director: "Abatiye Hailemariyam",
     role: "Director",
+    photo: "",
     focus: [
       "Strengthening health systems",
       "Expanding access to quality education",
@@ -33,30 +37,35 @@ const departments = [
     name: "Environment & Agriculture Directorate",
     director: "Amare Mekonen",
     role: "Director",
+    photo: "",
     focus: ["Promoting sustainable agriculture", "Environmental protection", "Climate resilience"],
   },
   {
     name: "Peace, Youth & Digital Directorate",
     director: "Tadesse Belay",
     role: "Director",
+    photo: tadesseBelayImg,
     focus: ["Empowering youth", "Advancing peacebuilding initiatives", "Enhancing digital literacy and innovation"],
   },
   {
     name: "Finance & HR Administration Directorate",
     director: "Selam Ayenew",
     role: "Director",
+    photo: selamAyenewImg,
     focus: ["Managing financial transparency", "Strengthening HR systems", "Organizational administration"],
   },
   {
     name: "Partnership & Resource Mobilization Directorate",
     director: "Dr Aweke Moges",
     role: "Director",
+    photo: "",
     focus: ["Building partnerships", "Mobilizing resources", "Ensuring accountability through monitoring & evaluation"],
   },
   {
     name: "Monitoring & Evaluation Directorate",
     director: "Tegegne Akililu",
     role: "Director",
+    photo: "",
     focus: [
       "Performance tracking",
       "Data collection & analysis",
@@ -70,6 +79,8 @@ const departments = [
     name: "Information Technology Directorate",
     director: "BetreMariyam Yosef",
     role: "IT Advisor",
+    photo: betreImg,
+    linkedin: "https://www.linkedin.com/in/betremariyamyosef/",
     focus: [
       "Digital transformation & innovation",
       "ICT infrastructure development",
@@ -77,6 +88,19 @@ const departments = [
       "Systems integration & automation",
       "Capacity building & digital literacy",
       "Data management & analytics",
+    ],
+  },
+  {
+    name: "Deputy Executive Officer",
+    director: "Mr. Mandefro Haile",
+    role: "",
+    photo: "",
+    focus: [
+      "Organizational Leadership & Governance",
+      "Coordination & Oversight",
+      "Capacity Building & Staff Development",
+      "Monitoring, Evaluation & Reporting",
+      "Representation & Advocacy",
     ],
   },
 ];
@@ -222,24 +246,49 @@ function Governance() {
             <div className="text-[11px] uppercase tracking-[0.3em] text-gold mb-3">Operational Structure</div>
             <h2 className="font-display text-3xl md:text-4xl text-primary leading-tight">Directorates</h2>
             <div className="w-16 h-[3px] bg-gold mx-auto my-5" />
-            <p className="text-muted-foreground text-sm">Programs and operations are delivered through seven specialized directorates, each led by a director or advisor reporting to the Executive Director.</p>
+            <p className="text-muted-foreground text-sm">Programs and operations are delivered through specialized directorates and executive leadership, each reporting to the Executive Director.</p>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {departments.map((d) => (
-              <div key={d.name} className="border border-border bg-background p-6 hover:border-gold transition flex flex-col">
-                <div className="w-10 h-10 bg-primary/10 text-primary flex items-center justify-center rounded-sm mb-3 shrink-0">
-                  <FileText className="w-5 h-5" />
+              <article key={d.name + d.director} className="group flex flex-col bg-background border border-border overflow-hidden hover:border-gold hover:-translate-y-1 transition duration-300">
+                <div className="relative h-56 bg-muted flex items-center justify-center p-5 overflow-hidden">
+                  {d.photo ? (
+                    <img
+                      src={d.photo}
+                      alt={d.director}
+                      className="max-h-full w-auto object-contain shadow-[var(--shadow-soft)]"
+                    />
+                  ) : (
+                    <div className="w-20 h-20 rounded-full bg-gradient-to-br from-primary/10 to-gold/10 border border-gold/30 flex items-center justify-center font-display font-bold text-xl text-primary/70 shrink-0">
+                      {d.director.replace(/^(Mr\.|Dr\.)\s+/i, "").split(/\s+/).map(w => w[0]).slice(0, 2).join("")}
+                    </div>
+                  )}
+                  <div className="absolute bottom-0 left-0 w-full h-[3px] bg-gradient-to-r from-gold via-gold/60 to-transparent" />
                 </div>
-                <div className="font-display text-base text-primary leading-tight">{d.name}</div>
-                <div className="text-[10px] uppercase tracking-widest text-gold font-semibold mt-1">{d.role} · {d.director}</div>
-                <ul className="mt-3 space-y-1.5">
-                  {d.focus.map((f) => (
-                    <li key={f} className="text-xs text-muted-foreground leading-relaxed flex items-start gap-2">
-                      <Check className="w-3.5 h-3.5 text-gold mt-0.5 shrink-0" /> {f}
-                    </li>
-                  ))}
-                </ul>
-              </div>
+                <div className="p-6 flex-1 flex flex-col">
+                  <div className="text-[10px] uppercase tracking-[0.3em] text-gold font-semibold">{d.name}</div>
+                  {d.linkedin ? (
+                    <a
+                      href={d.linkedin}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="mt-1.5 font-display text-xl text-primary leading-snug inline-flex items-center gap-2 hover:text-gold transition-colors"
+                    >
+                      {d.director} <Linkedin className="w-4 h-4 text-gold" />
+                    </a>
+                  ) : (
+                    <div className="mt-1.5 font-display text-xl text-primary leading-snug">{d.director}</div>
+                  )}
+                  {d.role && <div className="text-xs text-muted-foreground mt-1">{d.role}</div>}
+                  <div className="mt-4 pt-4 border-t border-border space-y-2">
+                    {d.focus.map((f) => (
+                      <div key={f} className="text-xs text-muted-foreground leading-relaxed flex items-start gap-2.5">
+                        <Check className="w-3.5 h-3.5 text-gold mt-0.5 shrink-0" /> {f}
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </article>
             ))}
           </div>
         </div>

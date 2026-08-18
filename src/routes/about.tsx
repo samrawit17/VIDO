@@ -165,6 +165,7 @@ function About() {
               <div className="absolute -bottom-6 -left-6 bg-primary text-primary-foreground px-6 py-4 rounded-sm shadow-lg hidden md:block">
                 <div className="font-display text-2xl leading-none">1113/2019</div>
                 <div className="text-[10px] uppercase tracking-widest mt-1">FDRE ACSO Registered</div>
+                <div className="text-[10px] uppercase tracking-widest mt-1">With Registration No. #8042</div>
               </div>
             </div>
           </div>
