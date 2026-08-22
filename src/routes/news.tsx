@@ -1,8 +1,9 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { MapPin, ArrowRight, Heart } from "lucide-react";
+import { MapPin, ArrowRight, Heart, CalendarDays } from "lucide-react";
 import logoImg from "@/assets/VIDO-logo.png";
 import afroDigitalLogo from "@/assets/afro digital logo.png";
 import { GraphicPanel } from "@/components/graphic-panel";
+import gambilaImg from "@/assets/VUDO-members-at-gambila.jpeg";
 
 export const Route = createFileRoute("/news")({
   component: News,
@@ -88,11 +89,27 @@ function News() {
       {/* NEWS */}
       <section className="py-20 bg-background">
         <div className="container-editorial">
-          <div className="text-center max-w-xl mx-auto">
+          <div className="text-center max-w-xl mx-auto mb-12">
             <h2 className="font-display text-3xl md:text-4xl text-primary leading-tight">Latest News</h2>
             <div className="w-16 h-[3px] bg-gold mx-auto my-5" />
-            <p className="text-muted-foreground text-lg font-display italic">Coming soon — we'll share updates here!</p>
           </div>
+          <article className="max-w-3xl mx-auto border border-border bg-muted/30 overflow-hidden hover:border-gold transition">
+            <div className="grid md:grid-cols-2">
+              <div className="aspect-[4/3] overflow-hidden">
+                <img src={gambilaImg} alt="VIDO management team field visit in Benishangul-Gumuz" className="w-full h-full object-cover" />
+              </div>
+              <div className="p-8 flex flex-col justify-center">
+                <div className="flex items-center gap-2 text-[10px] uppercase tracking-widest text-gold mb-3">
+                  <CalendarDays className="w-3.5 h-3.5" />
+                  <span>Field Visit</span>
+                </div>
+                <h3 className="font-display text-xl text-primary leading-snug">Environmental Protection & Climate Change</h3>
+                <p className="text-sm text-muted-foreground mt-3 leading-relaxed">
+                  The VIDO management team stated during their field visit that their stay in the Benishangul-Gumuz Regional State to observe and study issues related to environmental protection and climate change was successful, noting that it will remain one of their key focus areas moving forward.
+                </p>
+              </div>
+            </div>
+          </article>
         </div>
       </section>
 

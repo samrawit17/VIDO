@@ -7,26 +7,15 @@ export const Route = createFileRoute("/about")({
   component: About,
 });
 
-const timeline = [
-  { year: "2019", event: "VIDO re-registered under FDRE ACSO Proclamation No. 1113/2019 with Registration No. 8042, formalizing its legal status as an indigenous non-governmental organization." },
-  { year: "2020", event: "Expanded WASH and primary healthcare operations across Oromia and SNNP regions, reaching 5,000+ households with clean water access." },
-  { year: "2021", event: "Launched integrated education and livelihoods programs; established elder-led peace councils in conflict-prone woredas." },
-  { year: "2022", event: "Opened diaspora engagement window; deployed MEAL framework across all thematic axes with board-reviewed quarterly reporting." },
-  { year: "2023", event: "Extended operations to nine regions including Afar, Benishangul-Gumuz, Gambela, Sidama and Tigray; indigenous seed bank partnership with Deshet Centre." },
-  { year: "2024", event: "Scaled community-owned WASH infrastructure to 12,000+ households; launched youth entrepreneurship and digital literacy tracks." },
-  {
-    year: "2025",
-    intro: "Partnered with EREGEB Education Service to implement the Xless African Initiative across 88 public schools in the Addis Ababa City Administration, targeting 150,000 students and nearly 10,000 teachers to improve academic performance and boost teacher motivation.",
-    points: [
-      "Collaborated with IDAPRO, a local indigenous organization, to advocate for peacebuilding initiatives.",
-      "Originated the “Green Era” concept in one regional state, delivering technical and consulting support to convert strategic and operational plans into action.",
-      "Mobilized and donated essential medical equipment and pharmaceuticals to restore health facilities damaged by conflict.",
-      "Delivered short-term training programs to diverse healthcare professionals to enhance their technical and clinical skills.",
-      "Facilitated professional and practical experience-sharing sessions for private health facilities via teleconferencing and in-person visits using volunteer experts.",
-      "Conducted workplace and campus outreach to raise digital literacy and foster a digital-age mindset among young people.",
-      "Spearheaded community awareness campaigns and action plans focused on mitigating human-induced environmental and riverbank pollution.",
-    ],
-  },
+const milestones = [
+  "Partnered with EREGEB Education Service to implement the Xless African Initiative across 88 public schools in the Addis Ababa City Administration targeting 150,000 students and nearly 10,000 teachers to improve academic performance and boost teacher motivation.",
+  "Collaborated with IDAPRO, a local indigenous organization, to advocate for peacebuilding initiatives.",
+  "Originated the \"Green Era\" concept in one regional state, delivering technical and consulting support to convert strategic and operational plans into action.",
+  "Mobilized and donated essential medical equipment and pharmaceuticals to restore health facilities damaged by conflict.",
+  "Delivered short-term training programs to diverse healthcare professionals to enhance their technical and clinical skills.",
+  "Facilitated professional and practical experience-sharing sessions for private health facilities via teleconferencing and in-person visits using volunteer experts.",
+  "Conducted workplace and campus outreach to raise digital literacy and foster a digital-age mindset among young people.",
+  "Spearheaded community awareness campaigns and action plans focused on mitigating human-induced environmental and riverbank pollution.",
 ];
 
 const regions = [
@@ -177,32 +166,14 @@ function About() {
               </div>
             </div>
           </div>
-          <div className="space-y-0 max-w-3xl mx-auto">
-            {timeline.map((t, i) => (
-              <div key={t.year} className="flex gap-6">
-                <div className="flex flex-col items-center">
-                  <div className="w-10 h-10 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-display text-sm font-bold shrink-0">{t.year.slice(-2)}</div>
-                  {i < timeline.length - 1 && <div className="w-[2px] flex-1 bg-gold/30" />}
-                </div>
-                <div className="pb-8 pt-1">
-                  <div className="font-display text-lg text-primary">{t.year}</div>
-                  {t.points ? (
-                    <>
-                      <p className="text-sm text-muted-foreground mt-1 leading-relaxed">{t.intro}</p>
-                      <ul className="mt-3 space-y-2">
-                        {t.points.map((p) => (
-                          <li key={p} className="text-sm text-muted-foreground leading-relaxed flex items-start gap-2">
-                            <span className="w-1.5 h-1.5 rounded-full bg-gold mt-1.5 shrink-0" /> {p}
-                          </li>
-                        ))}
-                      </ul>
-                    </>
-                  ) : (
-                    <p className="text-sm text-muted-foreground mt-1 leading-relaxed">{t.event}</p>
-                  )}
-                </div>
-              </div>
-            ))}
+          <div className="max-w-3xl mx-auto border-l-2 border-gold/30 pl-6 md:pl-8">
+            <ul className="space-y-2.5">
+              {milestones.map((p) => (
+                <li key={p} className="text-sm text-muted-foreground leading-relaxed flex items-start gap-3">
+                  <ArrowRight className="w-4 h-4 text-gold shrink-0 mt-0.5" /> {p}
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
       </section>
