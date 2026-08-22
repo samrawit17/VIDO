@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { MapPin, Heart, ArrowRight, Building2, Quote } from "lucide-react";
-import heroImg from "@/assets/hero-community.jpg";
+import { GraphicPanel } from "@/components/graphic-panel";
 import logoImg from "@/assets/VIDO-logo.png";
 import yifruImg from "@/assets/Board&Chief-Executive-profile/Professor Yifru Berhan Mitke.jpg";
 import abatiyeImg from "@/assets/Board&Chief-Executive-profile/Mr. Abatiye Hailemariyam.jpeg";
@@ -86,7 +86,7 @@ function Board() {
       {/* HERO */}
       <section className="relative">
         <div className="relative h-72 md:h-96 overflow-hidden">
-          <img src={heroImg} alt="Board & Chief Executive" className="w-full h-full object-cover" />
+          <GraphicPanel className="w-full h-full" tone="ink" icon={Building2} sublabel="Leadership" label="Board & Chief Executive" />
           <div className="absolute inset-0 bg-gradient-to-r from-ink/80 via-ink/50 to-transparent" />
           <div className="absolute inset-0 flex items-center">
             <div className="container-editorial">

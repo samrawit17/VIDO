@@ -3,11 +3,7 @@ import {
   Droplets, HeartPulse, BookOpen, Sprout, Users, Shield, ArrowRight, Heart,
   Check, MapPin, Target,
 } from "lucide-react";
-import programsHero from "@/assets/hero-community.jpg";
-import agImg from "@/assets/impact-agriculture.jpg";
-import eduImg from "@/assets/impact-education.jpg";
-import healthImg from "@/assets/impact-health.jpg";
-import studentsImg from "@/assets/impact-students.jpg";
+import { GraphicPanel } from "@/components/graphic-panel";
 import logoImg from "@/assets/VIDO-logo.png";
 
 export const Route = createFileRoute("/programs")({
@@ -19,7 +15,6 @@ const axesDetail = [
     icon: Droplets,
     title: "WASH",
     tagline: "Clean water, sanitation and hygiene for all",
-    image: programsHero,
     regions: ["Afar", "Oromia", "SNNP", "Sidama", "Benishangul-Gumuz"],
     objectives: [
       "Construct and rehabilitate community water points and boreholes",
@@ -34,7 +29,6 @@ const axesDetail = [
     icon: HeartPulse,
     title: "Health & Nutrition",
     tagline: "Primary healthcare, HIV/AIDS response, maternal & child nutrition",
-    image: healthImg,
     regions: ["Addis Ababa", "Oromia", "Amhara", "Tigray"],
     objectives: [
       "Strengthen primary healthcare delivery at kebele level",
@@ -49,7 +43,6 @@ const axesDetail = [
     icon: BookOpen,
     title: "Education",
     tagline: "Quality education, early childhood development and youth pathways",
-    image: eduImg,
     regions: ["Addis Ababa", "Oromia", "SNNP", "Gambela"],
     objectives: [
       "Expand early childhood development (ECD) centers in underserved communities",
@@ -64,7 +57,6 @@ const axesDetail = [
     icon: Sprout,
     title: "Environment & Livelihoods",
     tagline: "Climate-resilient agriculture and sustainable income generation",
-    image: agImg,
     regions: ["Oromia", "SNNP", "Sidama", "Benishangul-Gumuz"],
     objectives: [
       "Promote climate-resilient agriculture and conservation farming",
@@ -79,7 +71,6 @@ const axesDetail = [
     icon: Users,
     title: "Youth & Women Empowerment",
     tagline: "Skill-building, gender equity and economic independence",
-    image: studentsImg,
     regions: ["Addis Ababa", "Oromia", "Amhara", "SNNP", "Afar"],
     objectives: [
       "Provide technical and vocational skills training for youth",
@@ -94,7 +85,6 @@ const axesDetail = [
     icon: Shield,
     title: "Peace & Good Governance",
     tagline: "Human rights, democracy and community-led peacebuilding",
-    image: programsHero,
     regions: ["Oromia", "SNNP", "Tigray", "Afar", "Benishangul-Gumuz"],
     objectives: [
       "Facilitate elder-led reconciliation and conflict mediation councils",
@@ -155,7 +145,7 @@ function Programs() {
       {/* HERO */}
       <section className="relative">
         <div className="relative h-64 md:h-80 overflow-hidden">
-          <img src={programsHero} alt="VIDO programs" className="w-full h-full object-cover" />
+          <GraphicPanel className="w-full h-full" tone="ink" sublabel="Thematic Focus" label="Our Integrated Development Model" />
           <div className="absolute inset-0 bg-gradient-to-r from-ink/80 via-ink/50 to-transparent" />
           <div className="absolute inset-0 flex items-center">
             <div className="container-editorial">
@@ -227,7 +217,7 @@ function Programs() {
               </div>
               <div className={i % 2 === 0 ? "md:order-2" : "md:order-1"}>
                 <div className="aspect-video rounded-sm overflow-hidden shadow-[var(--shadow-lift)]">
-                  <img src={axis.image} alt={axis.title} className="w-full h-full object-cover" />
+                  <GraphicPanel className="w-full h-full" tone={i % 2 === 0 ? "primary" : "gold"} icon={axis.icon} label={axis.title} sublabel={axis.tagline} />
                 </div>
               </div>
             </div>

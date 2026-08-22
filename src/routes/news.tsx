@@ -2,7 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { MapPin, ArrowRight, Heart } from "lucide-react";
 import logoImg from "@/assets/VIDO-logo.png";
 import afroDigitalLogo from "@/assets/afro digital logo.png";
-import studentsImg from "@/assets/impact-students.jpg";
+import { GraphicPanel } from "@/components/graphic-panel";
 
 export const Route = createFileRoute("/news")({
   component: News,
@@ -56,7 +56,7 @@ function News() {
       {/* HERO */}
       <section className="relative">
         <div className="relative h-72 md:h-96 overflow-hidden">
-          <img src={studentsImg} alt="News & Events" className="w-full h-full object-cover" />
+          <GraphicPanel className="w-full h-full" tone="ink" sublabel="News & Events" label="Stories from the field" />
           <div className="absolute inset-0 bg-gradient-to-r from-ink/80 via-ink/50 to-transparent" />
           <div className="absolute inset-0 flex items-center">
             <div className="container-editorial">

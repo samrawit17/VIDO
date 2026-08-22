@@ -1,8 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, Heart, MapPin, Globe, Users, BookOpen, GraduationCap, Briefcase, HandHeart, Mail, Phone } from "lucide-react";
 import logoImg from "@/assets/VIDO-logo.png";
-import heroImg from "@/assets/hero-community.jpg";
-import studentsImg from "@/assets/impact-students.jpg";
+import { GraphicPanel } from "@/components/graphic-panel";
 
 export const Route = createFileRoute("/diaspora")({
   component: Diaspora,
@@ -100,7 +99,7 @@ function Diaspora() {
       {/* HERO */}
       <section className="relative">
         <div className="relative h-72 md:h-96 overflow-hidden">
-          <img src={heroImg} alt="Diaspora Engagement" className="w-full h-full object-cover" />
+          <GraphicPanel className="w-full h-full" tone="primary" icon={Globe} sublabel="Diaspora Engagement Window" label="Bring your skills home" />
           <div className="absolute inset-0 bg-gradient-to-r from-ink/80 via-ink/50 to-transparent" />
           <div className="absolute inset-0 flex items-center">
             <div className="container-editorial">

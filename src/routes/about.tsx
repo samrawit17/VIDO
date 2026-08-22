@@ -1,11 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, MapPin, Phone, Mail, Heart, Droplets, HeartPulse, BookOpen, Sprout, Users, Shield, Target, Check, Clock } from "lucide-react";
 import logoImg from "@/assets/VIDO-logo.png";
-import heroImg from "@/assets/hero-ethiopia.jpg";
-import studentsImg from "@/assets/impact-students.jpg";
-import agImg from "@/assets/impact-agriculture.jpg";
-import eduImg from "@/assets/impact-education.jpg";
-import healthImg from "@/assets/impact-health.jpg";
+import { GraphicPanel } from "@/components/graphic-panel";
 
 export const Route = createFileRoute("/about")({
   component: About,
@@ -18,7 +14,19 @@ const timeline = [
   { year: "2022", event: "Opened diaspora engagement window; deployed MEAL framework across all thematic axes with board-reviewed quarterly reporting." },
   { year: "2023", event: "Extended operations to nine regions including Afar, Benishangul-Gumuz, Gambela, Sidama and Tigray; indigenous seed bank partnership with Deshet Centre." },
   { year: "2024", event: "Scaled community-owned WASH infrastructure to 12,000+ households; launched youth entrepreneurship and digital literacy tracks." },
-  { year: "2025", event: "Governance & Transparency Forum held; FY2026 accountability report published; 100% community-ownership milestone achieved across active programs." },
+  {
+    year: "2025",
+    intro: "Partnered with EREGEB Education Service to implement the Xless African Initiative across 88 public schools in the Addis Ababa City Administration, targeting 150,000 students and nearly 10,000 teachers to improve academic performance and boost teacher motivation.",
+    points: [
+      "Collaborated with IDAPRO, a local indigenous organization, to advocate for peacebuilding initiatives.",
+      "Originated the “Green Era” concept in one regional state, delivering technical and consulting support to convert strategic and operational plans into action.",
+      "Mobilized and donated essential medical equipment and pharmaceuticals to restore health facilities damaged by conflict.",
+      "Delivered short-term training programs to diverse healthcare professionals to enhance their technical and clinical skills.",
+      "Facilitated professional and practical experience-sharing sessions for private health facilities via teleconferencing and in-person visits using volunteer experts.",
+      "Conducted workplace and campus outreach to raise digital literacy and foster a digital-age mindset among young people.",
+      "Spearheaded community awareness campaigns and action plans focused on mitigating human-induced environmental and riverbank pollution.",
+    ],
+  },
 ];
 
 const regions = [
@@ -104,7 +112,7 @@ function About() {
       {/* HERO */}
       <section className="relative">
         <div className="relative h-72 md:h-96 overflow-hidden">
-          <img src={heroImg} alt="About VIDO" className="w-full h-full object-cover" />
+          <GraphicPanel className="w-full h-full" tone="ink" sublabel="About Us" label="An indigenous Ethiopian NGO, built by community." />
           <div className="absolute inset-0 bg-gradient-to-r from-ink/80 via-ink/50 to-transparent" />
           <div className="absolute inset-0 flex items-center">
             <div className="container-editorial">
@@ -161,7 +169,7 @@ function About() {
               </p>
             </div>
             <div className="relative">
-              <img src={eduImg} alt="VIDO story" className="w-full h-80 object-cover rounded-sm shadow-[var(--shadow-lift)]" width={1200} height={900} loading="lazy" />
+              <GraphicPanel className="w-full h-80 rounded-sm shadow-[var(--shadow-lift)]" tone="primary" label="Our Story" sublabel="Rooted in community, guided by purpose" />
               <div className="absolute -bottom-6 -left-6 bg-primary text-primary-foreground px-6 py-4 rounded-sm shadow-lg hidden md:block">
                 <div className="font-display text-2xl leading-none">1113/2019</div>
                 <div className="text-[10px] uppercase tracking-widest mt-1">FDRE ACSO Registered</div>
@@ -178,7 +186,20 @@ function About() {
                 </div>
                 <div className="pb-8 pt-1">
                   <div className="font-display text-lg text-primary">{t.year}</div>
-                  <p className="text-sm text-muted-foreground mt-1 leading-relaxed">{t.event}</p>
+                  {t.points ? (
+                    <>
+                      <p className="text-sm text-muted-foreground mt-1 leading-relaxed">{t.intro}</p>
+                      <ul className="mt-3 space-y-2">
+                        {t.points.map((p) => (
+                          <li key={p} className="text-sm text-muted-foreground leading-relaxed flex items-start gap-2">
+                            <span className="w-1.5 h-1.5 rounded-full bg-gold mt-1.5 shrink-0" /> {p}
+                          </li>
+                        ))}
+                      </ul>
+                    </>
+                  ) : (
+                    <p className="text-sm text-muted-foreground mt-1 leading-relaxed">{t.event}</p>
+                  )}
                 </div>
               </div>
             ))}
@@ -257,7 +278,7 @@ function About() {
               </div>
             </div>
             <div>
-              <img src={agImg} alt="Geographic reach" className="w-full h-96 object-cover rounded-sm shadow-[var(--shadow-lift)]" width={1200} height={900} loading="lazy" />
+              <GraphicPanel className="w-full h-96 rounded-sm shadow-[var(--shadow-lift)]" tone="gold" label="Geographic Reach" sublabel="Nine regions · One mission" />
             </div>
           </div>
         </div>

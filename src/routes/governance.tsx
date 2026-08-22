@@ -7,6 +7,8 @@ import selamAyenewImg from "@/assets/Directorates/Selamawit Ayenew.jpg";
 import amareMekonenImg from "@/assets/Directorates/Amare Mekonen.jpeg";
 import tegegneAkliluImg from "@/assets/Directorates/Tegegne Aklilu.jpeg";
 import samueleImg from "@/assets/Directorates/DrSamuele Mengistu Urge.jpeg";
+import awekeImg from "@/assets/Directorates/Dr Aweke Moges.jpeg";
+import mandefroImg from "@/assets/Directorates/Mr. Mandefro Haile.jpeg";
 
 export const Route = createFileRoute("/governance")({
   component: Governance,
@@ -61,7 +63,7 @@ const departments = [
     name: "Partnership & Resource Mobilization Directorate",
     director: "Dr Aweke Moges",
     role: "Director",
-    photo: "",
+    photo: awekeImg,
     focus: ["Building partnerships", "Mobilizing resources", "Ensuring accountability through monitoring & evaluation"],
   },
   {
@@ -97,7 +99,7 @@ const departments = [
     name: "Deputy Executive Officer",
     director: "Mr. Mandefro Haile",
     role: "",
-    photo: "",
+    photo: mandefroImg,
     focus: [
       "Organizational Leadership & Governance",
       "Coordination & Oversight",

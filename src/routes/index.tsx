@@ -3,11 +3,7 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import logoImg from "@/assets/VIDO-logo.png";
 import afroDigitalLogo from "@/assets/afro digital logo.png";
 import heroImg from "@/assets/hero-community.jpg";
-import studentsImg from "@/assets/impact-students.jpg";
-import programsImg from "@/assets/tile-programs.jpg";
-import careersImg from "@/assets/tile-careers.jpg";
-import eduImg from "@/assets/impact-education.jpg";
-import healthImg from "@/assets/impact-health.jpg";
+import { GraphicPanel } from "@/components/graphic-panel";
 import yifruImg from "@/assets/Board&Chief-Executive-profile/Professor Yifru Berhan Mitke.jpg";
 import abatiyeImg from "@/assets/Board&Chief-Executive-profile/Mr. Abatiye Hailemariyam.jpeg";
 import tadesseImg from "@/assets/Board&Chief-Executive-profile/Mr. Tadesse Atlabachew Abegaz.jpeg";
@@ -83,9 +79,9 @@ const axes = [
 ];
 
 const tiles = [
-  { title: "Thematic Focus", subtitle: "Integrated development model", img: programsImg, href: "/programs" },
-  { title: "Board & Leadership", subtitle: "9 professionals steering VIDO", img: studentsImg, href: "/board" },
-  { title: "Diaspora", subtitle: "Co-invest with us", img: careersImg, href: "/diaspora" },
+  { title: "Thematic Focus", subtitle: "Integrated development model", icon: Sprout, href: "/programs" },
+  { title: "Board & Leadership", subtitle: "9 professionals steering VIDO", icon: Users, href: "/board" },
+  { title: "Diaspora", subtitle: "Co-invest with us", icon: Globe, href: "/diaspora" },
 ];
 
 const socialTiles = [
@@ -193,7 +189,7 @@ function Index() {
       {/* HERO */}
       <section ref={heroRef} className="relative">
         <div className="relative h-[520px] md:h-[600px] overflow-hidden">
-          <img src={heroImg} alt="VIDO community" className="w-full h-full object-cover" width={1920} height={900} />
+          <img src={heroImg} alt="VIDO community" className="w-full h-full object-cover" width={1280} height={720} />
           <div className="absolute inset-0 bg-gradient-to-r from-ink/70 via-ink/40 to-transparent" />
           <div className="absolute inset-0 flex items-center">
             <div className="container-editorial">
@@ -231,7 +227,6 @@ function Index() {
 
       {/* AUDIENCE TABS */}
       <section id="about" className="relative py-20 bg-muted">
-        <div className="absolute inset-0 opacity-10 pointer-events-none" style={{ backgroundImage: `url(${eduImg})`, backgroundSize: "cover", backgroundPosition: "center" }} />
         <div className="container-editorial relative">
           <div className="flex flex-wrap gap-2 justify-center mb-10">
             {(Object.keys(audienceTabs) as Array<keyof typeof audienceTabs>).map((k) => (
@@ -323,7 +318,7 @@ function Index() {
       <section className="grid md:grid-cols-3">
         {tiles.map((t) => (
           <a key={t.title} href={t.href} className="group relative h-64 md:h-80 overflow-hidden">
-            <img src={t.img} alt={t.title} className="w-full h-full object-cover group-hover:scale-105 transition duration-700" width={1000} height={700} loading="lazy" />
+            <GraphicPanel className="w-full h-full group-hover:scale-105 transition duration-700" tone={t.title === "Diaspora" ? "ink" : "primary"} icon={t.icon} />
             <div className="absolute inset-0 bg-gradient-to-t from-ink/85 via-ink/40 to-transparent" />
             <div className="absolute inset-0 p-8 flex flex-col justify-end text-primary-foreground">
               <div className="text-[11px] uppercase tracking-widest text-gold opacity-90">{t.subtitle}</div>
@@ -360,7 +355,7 @@ function Index() {
       <section id="donate" className="py-20">
         <div className="container-editorial grid md:grid-cols-2 gap-12 items-center">
           <button onClick={() => setVideoOpen(true)} className="group relative aspect-video rounded-sm overflow-hidden shadow-[var(--shadow-lift)]">
-            <img src={healthImg} alt="VIDO impact story" className="w-full h-full object-cover" width={1200} height={675} loading="lazy" />
+            <GraphicPanel className="w-full h-full" tone="primary" sublabel="Video" label="Our impact story" />
             <div className="absolute inset-0 bg-ink/40 group-hover:bg-ink/30 transition flex items-center justify-center">
               <div className="w-20 h-20 rounded-full bg-gold text-gold-foreground flex items-center justify-center shadow-xl group-hover:scale-110 transition">
                 <Play className="w-8 h-8 ml-1" />
@@ -434,7 +429,7 @@ function Index() {
             </Link>
           </div>
           <div className="relative">
-            <img src={studentsImg} alt="Ethiopian community" className="w-full h-[360px] object-cover rounded-sm shadow-[var(--shadow-lift)]" width={1200} height={900} loading="lazy" />
+            <GraphicPanel className="w-full h-[360px] rounded-sm shadow-[var(--shadow-lift)]" tone="primary" label="Engagement Approach" sublabel="One Problem · One Project · One Solution" />
             <div className="absolute -bottom-6 -left-6 bg-gold text-gold-foreground px-6 py-4 rounded-sm shadow-lg hidden md:block">
               <div className="font-display text-2xl leading-none">1113/2019</div>
               <div className="text-[10px] uppercase tracking-widest mt-1">FDRE ACSO Registered</div>
