@@ -151,7 +151,7 @@ function Contact() {
               {/* EXECUTIVE CONTACT */}
               <div className="border border-border bg-muted/40 p-6">
                 <div className="text-[11px] uppercase tracking-[0.3em] text-gold mb-3">Executive Director</div>
-                <div className="font-display text-2xl text-primary leading-tight">Mr. Tadesse Atlabachew Abegaz</div>
+                <div className="font-display text-2xl text-primary leading-tight">Mr. Tadesse Atlabachew Abegaz (PhD candidate) </div>
                 <p className="text-sm text-muted-foreground mt-2 leading-relaxed">
                   Chief Executive Director & Board Secretary of Vital Vision Integrated Development Organization.
                   Reach out directly for strategic partnerships, governance matters and high-level inquiries.
@@ -241,7 +241,7 @@ function Contact() {
             <div className="text-[11px] uppercase tracking-widest text-gold mb-3">Headquarters</div>
             <ul className="space-y-2 text-sm opacity-90">
               <li className="flex items-start gap-2"><MapPin className="w-4 h-4 mt-0.5 shrink-0" /> <span>Hiwot Corner Center, Nifas Silk Lafto — Wereda 11<br />Addis Ababa, Ethiopia</span></li>
-              <li className="opacity-80 text-xs mt-3">Executive Director<br /><span className="opacity-100">Mr. Tadesse Atlabachew Abegaz</span></li>
+              <li className="opacity-80 text-xs mt-3">Executive Director<br /><span className="opacity-100">Mr. Tadesse Atlabachew Abegaz (PhD candidate) </span></li>
             </ul>
           </div>
         </div>
