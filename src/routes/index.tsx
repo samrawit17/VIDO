@@ -121,6 +121,12 @@ function Index() {
   const [heroInView, setHeroInView] = useState(false);
 
   useEffect(() => {
+    if (typeof window !== "undefined" && window.location.hash === "#it-advisor") {
+      window.location.replace("/governance#it-advisor");
+    }
+  }, []);
+
+  useEffect(() => {
     const el = heroRef.current;
     if (!el) return;
     const obs = new IntersectionObserver(([e]) => e.isIntersecting && setHeroInView(true), { threshold: 0.2 });

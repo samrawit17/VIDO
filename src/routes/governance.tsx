@@ -1,4 +1,5 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { createFileRoute, Link, useLocation } from "@tanstack/react-router";
+import { useEffect } from "react";
 import { Building2, Shield, Check, ArrowRight, Heart, MapPin, Users, Scale, Phone, Mail, Linkedin } from "lucide-react";
 import logoImg from "@/assets/VIDO-logo.png";
 import betreImg from "@/assets/Directorates/BetrePic.jpeg";
@@ -81,6 +82,7 @@ const departments = [
     ],
   },
   {
+    id: "it-advisor",
     name: "Information Technology Directorate",
     director: "BetreMariyam Yosef",
     role: "IT Advisor",
@@ -118,6 +120,34 @@ const principles = [
 ];
 
 function Governance() {
+  const location = useLocation();
+
+  useEffect(() => {
+    const scrollToHash = () => {
+      const hash = window.location.hash || location.hash;
+      if (!hash) return;
+      const targetId = hash.replace(/^#/, "");
+      const targetElement = document.getElementById(targetId);
+      if (targetElement) {
+        targetElement.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    };
+
+    // Immediate attempt after render
+    scrollToHash();
+
+    // Staggered attempts to account for hydration, layout reflow, and image loading
+    const timer1 = setTimeout(scrollToHash, 150);
+    const timer2 = setTimeout(scrollToHash, 500);
+
+    window.addEventListener("hashchange", scrollToHash);
+    return () => {
+      clearTimeout(timer1);
+      clearTimeout(timer2);
+      window.removeEventListener("hashchange", scrollToHash);
+    };
+  }, [location.hash]);
+
   return (
     <div className="min-h-screen bg-background text-foreground">
       {/* TOP BAR */}
@@ -255,7 +285,14 @@ function Governance() {
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {departments.map((d) => (
-              <article key={d.name + d.director} className="group flex flex-col bg-background border border-border overflow-hidden hover:border-gold hover:-translate-y-1 transition duration-300">
+              <article
+                key={d.name + d.director}
+                id={d.id}
+                style={d.id ? { scrollMarginTop: "100px" } : undefined}
+                className={`group flex flex-col bg-background border border-border overflow-hidden hover:border-gold hover:-translate-y-1 transition duration-300 ${
+                  d.id ? "scroll-mt-24 md:scroll-mt-28" : ""
+                }`}
+              >
                 <div className="relative h-56 bg-muted flex items-center justify-center p-5 overflow-hidden">
                   {d.photo ? (
                     <img
